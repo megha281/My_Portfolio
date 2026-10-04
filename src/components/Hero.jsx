@@ -119,7 +119,7 @@ export default function Hero() {
           </button>
           <a
             href="/resume.pdf"
-            download
+            download="Meghashri_Lakshmi_Resume.pdf"
             className="px-7 py-3.5 rounded-full border border-line text-paper font-medium hover:border-violet-soft/60 hover:text-violet-soft transition-colors flex items-center gap-2"
           >
             <Download size={16} />
@@ -137,6 +137,7 @@ export default function Hero() {
           <a href={`mailto:${profile.email}`} aria-label="Email" className="hover:text-paper transition-colors">
             <Mail size={20} />
           </a>
+          
         </motion.div>
       </motion.div>
 

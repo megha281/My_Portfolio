@@ -39,43 +39,24 @@ export default function About() {
   return (
     <section id="about" className="relative py-28 md:py-36 px-6 md:px-12 max-w-6xl mx-auto">
       <div className="grid md:grid-cols-[0.85fr_1.15fr] gap-14 md:gap-20 items-start">
-        {/* Left: abstract developer visual */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative aspect-[4/5] rounded-3xl overflow-hidden glass"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo/30 via-violet/20 to-azure/20" />
-          <svg viewBox="0 0 300 375" className="absolute inset-0 w-full h-full opacity-90">
-            <defs>
-              <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#8B5CF6" />
-                <stop offset="100%" stopColor="#3AA6FF" />
-              </linearGradient>
-            </defs>
-            <circle cx="150" cy="140" r="58" fill="none" stroke="url(#avatarGrad)" strokeWidth="1.5" opacity="0.7" />
-            <circle cx="150" cy="140" r="42" fill="url(#avatarGrad)" opacity="0.15" />
-            <path d="M150 88 L150 300" stroke="url(#avatarGrad)" strokeWidth="1" opacity="0.3" strokeDasharray="4 6" />
-            {[...Array(6)].map((_, i) => (
-              <circle
-                key={i}
-                cx={60 + i * 36}
-                cy={310 + (i % 2 === 0 ? -10 : 10)}
-                r="3"
-                fill="#A78BFA"
-                opacity="0.6"
-              />
-            ))}
-            <text x="150" y="145" textAnchor="middle" className="font-display" fontSize="34" fill="#E9E9F3" fontWeight="600">
-              ML
-            </text>
-          </svg>
-          <div className="absolute bottom-5 left-5 right-5 mono-tag text-[11px] text-violet-soft/70">
-            kishkinda_university · cse_final_year
-          </div>
-        </motion.div>
+        {/* Left: profile photo */}
+<motion.div
+  initial={{ opacity: 0, x: -30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, margin: '-100px' }}
+  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+  className="relative aspect-[4/5] rounded-3xl overflow-hidden glass"
+>
+  <img
+    src="/profile.jpg"
+    alt="Meghashri Lakshmi"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* Subtle overlay to match the portfolio theme */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+</motion.div>
 
         {/* Right: intro + stats */}
         <div>
